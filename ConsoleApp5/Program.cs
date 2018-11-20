@@ -58,35 +58,12 @@ namespace ConsoleApp5
         public string Name2 { get; set; }
         public int Id2 { get; set; }
 
-
-        public void Save(string path)
-        {
-            var serializer = new XmlSerializer(typeof(Product));
-            using (var stream = new FileStream(path, FileMode.Create))
-            {
-                serializer.Serialize(stream, this);
-            }
-        }
-
-        public string Save()
-        {
-            var serializer = new XmlSerializer(typeof(Product));
-            using (StringWriter textWriter = new StringWriter())
-            {
-                serializer.Serialize(textWriter, this);
-                return textWriter.ToString();
-            }
-
-
-            //using (var stream = new MemoryStream())
-            //{
-            //    serializer.Serialize(stream, this);
-            //}
-        }
-
-
-
     }
 
+    public class funkcjaX
+    {
+        public int Id { get; set; }
+
+    }
 
 }
