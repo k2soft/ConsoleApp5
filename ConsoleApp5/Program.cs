@@ -13,9 +13,38 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
 
+            StudentClass stt = new StudentClass();
+            var highScores = from student in StudentClass.students
+                             where student.ExamScores[1] > 90 && student.FirstName.IndexOf("a")>-1
+                             orderby student.FirstName
+                             select new { Name = student.FirstName, Score = student.ExamScores[1] };
+
+            foreach (var item in highScores)
+            {
+                Console.WriteLine($"{item.Name,-15}{item.Score}");
+            }
+
+
+            List<int> numbers2 = new List<int>() { 15, 14, 11, 13, 19, 18, 16, 17, 12, 10 };
+
+            var numCount = numbers2.Where(n => n < 13 && n > 7).Count();
+
+            var fdf = from num in numbers2
+                      where num < 13 && num > 7
+                      orderby num ascending
+                      select num;
+
+            IEnumerable<int> largeNumbersQuery = numbers2.Where(c => c > 15);
+
+
             Stack st = new Stack();
-            int ax = new (int) [ 1, 2, 3, 4, 5, 6, 7 ];
-            st.Table = 
+            int[] ax =  { 1, 2, 3, 4, 5, 6, 7,34,23,16,34 };
+            st.Table = ax;
+
+            foreach (int cx in st.FromToBy(3,6,1))
+            {
+                int df = cx;
+            }
 
 
             string kdkd = null;
