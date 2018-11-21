@@ -20,7 +20,7 @@ namespace ConsoleApp5
 
             Product pr = new Product() { Name = "test" };
             Product pr1 = new Product();
-            var dres = new { pasek1 = "biały" };
+            var dres = new { pasek1 = "biały", pasek2 = "czarny" };
 
             string vhsh = pr?.Name ?? "e";
             bool fName = true;
