@@ -60,10 +60,5 @@ namespace ConsoleApp5
 
     }
 
-    public class funkcjaX
-    {
-        public int Id { get; set; }
-
-    }
 
 }
