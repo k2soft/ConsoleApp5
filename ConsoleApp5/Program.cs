@@ -13,6 +13,11 @@ namespace ConsoleApp5
         static void Main(string[] args)
         {
 
+            Stack st = new Stack();
+            int ax = new (int) [ 1, 2, 3, 4, 5, 6, 7 ];
+            st.Table = 
+
+
             string kdkd = null;
 
             int? s = null; //a, teraz ok
