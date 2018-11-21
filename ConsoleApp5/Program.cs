@@ -17,6 +17,7 @@ namespace ConsoleApp5
 
             int? s = null; //a, teraz ok
 
+
             Product pr = new Product() { Name = "test" };
             Product pr1 = new Product();
             var dres = new { pasek1 = "biały" };
