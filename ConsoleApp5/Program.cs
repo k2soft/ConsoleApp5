@@ -75,5 +75,9 @@ namespace ConsoleApp5
 
      }
 
+    public class funkcjaY
+    {
+        public int Idy { get; set; }
 
+    }
 }
