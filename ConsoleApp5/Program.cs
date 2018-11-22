@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
@@ -12,6 +13,26 @@ namespace ConsoleApp5
     {
         static void Main(string[] args)
         {
+
+            string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+            var diri = Directory.GetCurrentDirectory();
+            var dirl = Directory.GetDirectories("c:\\ft");
+
+
+            
+
+
+            Stos<string> stos = new Stos<string>();
+            string[] az = { "1", "2", "3", "4" };
+            stos.Tab = az;
+            foreach (string cx in stos)
+            {
+                string df = cx;
+            }
+
+
+
 
             StudentClass stt = new StudentClass();
             var highScores = from student in StudentClass.students

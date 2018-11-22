@@ -49,6 +49,28 @@ namespace ConsoleApp5
 
     }//class
 
+
+    public class Stos<T> : IEnumerable<T>
+    {
+        T[] tab;
+        int cnt;
+
+        public T[] Tab { get => tab; set => tab = value; }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = cnt;i>=0;i--)
+            {
+                yield return Tab[i];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ((IEnumerable<T>)this).GetEnumerator();
+        }
+    }
+
     public class StudentClass
     {
         public enum GradeLevel { FirstYear = 1, SecondYear, ThirdYear, FourthYear };
