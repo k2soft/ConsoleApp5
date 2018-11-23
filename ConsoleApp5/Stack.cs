@@ -55,7 +55,20 @@ namespace ConsoleApp5
         T[] tab;
         int cnt;
 
-        public T[] Tab { get => tab; set => tab = value; }
+        public T[] Tab
+        {
+            get
+            {
+                return tab;
+            }
+
+            set
+            {
+                tab = value;
+            }
+        }
+
+        //public T[] Tab { get => tab; set => tab = value; }
 
         public IEnumerator<T> GetEnumerator()
         {
